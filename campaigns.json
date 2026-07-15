@@ -1,37 +1,113 @@
-[
-  {
-    "en": {"title": "New challengers are climbing 🏆", "body": "The competition is heating up and new players keep joining. Jump back in and defend your spot on the leaderboard!"},
-    "fr": {"title": "De nouveaux joueurs arrivent 🏆", "body": "La compétition monte d'un cran et de nouveaux joueurs rejoignent le classement. Reviens vite défendre ta place !"},
-    "es": {"title": "Llegan nuevos rivales 🏆", "body": "La competición se pone dura y se unen nuevos jugadores. ¡Vuelve y defiende tu puesto en la clasificación!"},
-    "ja": {"title": "新たな挑戦者が登場 🏆", "body": "競争が激しくなり、新しいプレイヤーが続々と参加中。戻ってランキングの座を守ろう！"},
-    "pt": {"title": "Novos desafiantes a subir 🏆", "body": "A competição está a ficar mais difícil e novos jogadores continuam a entrar. Volta e defende o teu lugar no ranking!"}
-  },
-  {
-    "en": {"title": "Someone is after your rank 👀", "body": "A player is closing in on your best score. Come back and put them in their place!"},
-    "fr": {"title": "Ton rang est menacé 👀", "body": "Un joueur se rapproche de ton meilleur score. Reviens vite lui montrer qui commande !"},
-    "es": {"title": "Alguien va por tu puesto 👀", "body": "Un jugador se acerca a tu mejor puntuación. ¡Vuelve y ponlo en su sitio!"},
-    "ja": {"title": "順位が狙われています 👀", "body": "あるプレイヤーがあなたのベストスコアに迫っています。戻って実力を見せつけよう！"},
-    "pt": {"title": "Alguém quer o teu lugar 👀", "body": "Um jogador está a chegar perto da tua melhor pontuação. Volta e mostra quem manda!"}
-  },
-  {
-    "en": {"title": "Can you beat your best? 🔥", "body": "You are one run away from a new personal record. Give it a shot right now!"},
-    "fr": {"title": "Bats ton record ? 🔥", "body": "Il te manque une partie pour un nouveau record perso. Tente le coup maintenant !"},
-    "es": {"title": "¿Superas tu récord? 🔥", "body": "Estás a una partida de un nuevo récord personal. ¡Inténtalo ahora mismo!"},
-    "ja": {"title": "自己ベスト更新なるか？ 🔥", "body": "あと1回で自己新記録。今すぐ挑戦しよう！"},
-    "pt": {"title": "Bates o teu recorde? 🔥", "body": "Estás a uma partida de um novo recorde pessoal. Tenta agora mesmo!"}
-  },
-  {
-    "en": {"title": "Weekend challenge is on ⚡️", "body": "Players are grinding for the top this weekend. Climb the ranks before it resets!"},
-    "fr": {"title": "Défi du week-end ⚡️", "body": "Les joueurs se battent pour le sommet ce week-end. Grimpe au classement avant la fin !"},
-    "es": {"title": "Reto del fin de semana ⚡️", "body": "Los jugadores luchan por la cima este fin de semana. ¡Sube en la clasificación antes de que acabe!"},
-    "ja": {"title": "週末チャレンジ開催中 ⚡️", "body": "今週末はみんなが頂点を目指して奮闘中。リセット前にランクを上げよう！"},
-    "pt": {"title": "Desafio de fim de semana ⚡️", "body": "Os jogadores estão a lutar pelo topo este fim de semana. Sobe no ranking antes que reinicie!"}
-  },
-  {
-    "en": {"title": "We miss you 💙", "body": "Your spot on the leaderboard is getting cold. Come back for a quick run and reclaim it!"},
-    "fr": {"title": "Tu nous manques 💙", "body": "Ta place au classement refroidit. Reviens pour une partie rapide et reprends-la !"},
-    "es": {"title": "Te echamos de menos 💙", "body": "Tu puesto en la clasificación se enfría. ¡Vuelve para una partida rápida y recupéralo!"},
-    "ja": {"title": "お待ちしています 💙", "body": "ランキングでのあなたの座が冷めてきています。サッと1回プレイして取り戻そう！"},
-    "pt": {"title": "Sentimos a tua falta 💙", "body": "O teu lugar no ranking está a arrefecer. Volta para uma partida rápida e reconquista-o!"}
-  }
-]
+{
+  "Maze Glass": [
+    {
+      "en": {"title": "New challengers are climbing 🏆", "body": "The maze leaderboard is heating up and new players keep joining. Jump back in and defend your rank!"},
+      "fr": {"title": "De nouveaux joueurs arrivent 🏆", "body": "Le classement des labyrinthes s'enflamme et de nouveaux joueurs arrivent. Reviens défendre ton rang !"},
+      "es": {"title": "Llegan nuevos rivales 🏆", "body": "La clasificación de laberintos se calienta y se unen nuevos jugadores. ¡Vuelve y defiende tu puesto!"},
+      "ja": {"title": "新たな挑戦者が登場 🏆", "body": "迷路ランキングが白熱、新しいプレイヤーも続々参加中。戻って順位を守ろう！"},
+      "pt": {"title": "Novos desafiantes a subir 🏆", "body": "O ranking dos labirintos está a aquecer e novos jogadores continuam a entrar. Volta e defende o teu lugar!"}
+    },
+    {
+      "en": {"title": "Someone is after your rank 👀", "body": "A player is closing in on your best time. Come back and put them in their place!"},
+      "fr": {"title": "Ton rang est menacé 👀", "body": "Un joueur se rapproche de ton meilleur temps. Reviens vite lui montrer qui commande !"},
+      "es": {"title": "Alguien va por tu puesto 👀", "body": "Un jugador se acerca a tu mejor tiempo. ¡Vuelve y ponlo en su sitio!"},
+      "ja": {"title": "順位が狙われています 👀", "body": "あるプレイヤーがあなたのベストタイムに迫っています。戻って実力を見せよう！"},
+      "pt": {"title": "Alguém quer o teu lugar 👀", "body": "Um jogador está a chegar perto do teu melhor tempo. Volta e mostra quem manda!"}
+    },
+    {
+      "en": {"title": "Beat your best time? 🔥", "body": "You are one run away from a new record. Solve a maze right now!"},
+      "fr": {"title": "Bats ton meilleur temps ? 🔥", "body": "Il te manque une partie pour un nouveau record. Résous un labyrinthe maintenant !"},
+      "es": {"title": "¿Superas tu mejor tiempo? 🔥", "body": "Estás a una partida de un nuevo récord. ¡Resuelve un laberinto ahora!"},
+      "ja": {"title": "自己ベスト更新なるか？ 🔥", "body": "あと1回で自己新記録。今すぐ迷路に挑戦しよう！"},
+      "pt": {"title": "Bates o teu melhor tempo? 🔥", "body": "Estás a uma partida de um novo recorde. Resolve um labirinto agora!"}
+    },
+    {
+      "en": {"title": "Weekend maze challenge ⚡️", "body": "Players are climbing the ranks this weekend. Move up before it resets!"},
+      "fr": {"title": "Défi labyrinthe du week-end ⚡️", "body": "Les joueurs grimpent au classement ce week-end. Monte avant la fin !"},
+      "es": {"title": "Reto de laberintos del finde ⚡️", "body": "Los jugadores suben en la clasificación este fin de semana. ¡Sube antes de que acabe!"},
+      "ja": {"title": "週末の迷路チャレンジ ⚡️", "body": "今週末はみんなが順位を上げています。リセット前にランクアップ！"},
+      "pt": {"title": "Desafio de labirintos ao fim de semana ⚡️", "body": "Os jogadores estão a subir no ranking este fim de semana. Sobe antes que reinicie!"}
+    },
+    {
+      "en": {"title": "Your maze awaits 💙", "body": "Your spot on the leaderboard is getting cold. Come solve a quick one and reclaim it!"},
+      "fr": {"title": "Ton labyrinthe t'attend 💙", "body": "Ta place au classement refroidit. Reviens résoudre un labyrinthe et reprends-la !"},
+      "es": {"title": "Tu laberinto te espera 💙", "body": "Tu puesto en la clasificación se enfría. ¡Vuelve, resuelve uno rápido y recupéralo!"},
+      "ja": {"title": "迷路があなたを待っています 💙", "body": "ランキングでのあなたの座が冷めてきています。サッと1問解いて取り戻そう！"},
+      "pt": {"title": "O teu labirinto espera-te 💙", "body": "O teu lugar no ranking está a arrefecer. Volta, resolve um rápido e reconquista-o!"}
+    }
+  ],
+  "Bloom": [
+    {
+      "en": {"title": "New gardeners are blooming 🌸", "body": "New players are growing bigger gardens and climbing the leaderboard. Jump back in and defend your rank!"},
+      "fr": {"title": "De nouveaux jardiniers fleurissent 🌸", "body": "De nouveaux joueurs font pousser de plus grands jardins et grimpent au classement. Reviens défendre ton rang !"},
+      "es": {"title": "Nuevos jardineros florecen 🌸", "body": "Nuevos jugadores cultivan jardines más grandes y suben en la clasificación. ¡Vuelve y defiende tu puesto!"},
+      "ja": {"title": "新しい庭師が続々 🌸", "body": "新しいプレイヤーがより大きな庭を育ててランキングを上昇中。戻って順位を守ろう！"},
+      "pt": {"title": "Novos jardineiros a florescer 🌸", "body": "Novos jogadores cultivam jardins maiores e sobem no ranking. Volta e defende o teu lugar!"}
+    },
+    {
+      "en": {"title": "Someone outgrew your score 👀", "body": "A player is passing your best. Come back and reclaim your place on the leaderboard!"},
+      "fr": {"title": "Ton score est dépassé 👀", "body": "Un joueur dépasse ton meilleur score. Reviens reprendre ta place au classement !"},
+      "es": {"title": "Alguien superó tu marca 👀", "body": "Un jugador está superando tu mejor puntuación. ¡Vuelve y recupera tu lugar!"},
+      "ja": {"title": "スコアが抜かれそう 👀", "body": "あるプレイヤーがあなたのベストを超えそうです。戻って順位を取り戻そう！"},
+      "pt": {"title": "Alguém superou a tua pontuação 👀", "body": "Um jogador está a passar a tua melhor marca. Volta e reconquista o teu lugar!"}
+    },
+    {
+      "en": {"title": "Grow your biggest garden? 🌱", "body": "You are one run from a new personal best. Give it a try right now!"},
+      "fr": {"title": "Fais pousser ton plus grand jardin ? 🌱", "body": "Il te manque une partie pour un nouveau record perso. Tente le coup maintenant !"},
+      "es": {"title": "¿Cultivas tu mayor jardín? 🌱", "body": "Estás a una partida de un nuevo récord personal. ¡Inténtalo ahora mismo!"},
+      "ja": {"title": "自己最大の庭を育てる？ 🌱", "body": "あと1回で自己ベスト更新。今すぐ挑戦しよう！"},
+      "pt": {"title": "Cultivas o teu maior jardim? 🌱", "body": "Estás a uma partida de um novo recorde pessoal. Tenta agora mesmo!"}
+    },
+    {
+      "en": {"title": "Weekend bloom challenge ⚡️", "body": "Players are climbing the garden leaderboard this weekend. Move up before it resets!"},
+      "fr": {"title": "Défi floraison du week-end ⚡️", "body": "Les joueurs grimpent au classement des jardins ce week-end. Monte avant la fin !"},
+      "es": {"title": "Reto de floración del finde ⚡️", "body": "Los jugadores suben en la clasificación de jardines este fin de semana. ¡Sube antes de que acabe!"},
+      "ja": {"title": "週末の開花チャレンジ ⚡️", "body": "今週末はみんなが庭のランキングを上げています。リセット前にランクアップ！"},
+      "pt": {"title": "Desafio de floração ao fim de semana ⚡️", "body": "Os jogadores estão a subir no ranking dos jardins este fim de semana. Sobe antes que reinicie!"}
+    },
+    {
+      "en": {"title": "Your garden misses you 💙", "body": "Your plants are waiting and your rank is cooling. Come grow one more!"},
+      "fr": {"title": "Ton jardin te manque 💙", "body": "Tes plantes t'attendent et ton rang refroidit. Reviens en faire pousser un de plus !"},
+      "es": {"title": "Tu jardín te echa de menos 💙", "body": "Tus plantas te esperan y tu puesto se enfría. ¡Vuelve y cultiva uno más!"},
+      "ja": {"title": "あなたの庭が待っています 💙", "body": "植物が待っていて、順位も冷めてきています。もう一つ育てに戻ろう！"},
+      "pt": {"title": "O teu jardim sente a tua falta 💙", "body": "As tuas plantas esperam por ti e o teu lugar está a arrefecer. Volta e cultiva mais um!"}
+    }
+  ],
+  "Trivio": [
+    {
+      "en": {"title": "New quizzes just dropped 🧠", "body": "Fresh questions are live and players are racing for the top scores. Can you beat them?"},
+      "fr": {"title": "De nouveaux quiz sont arrivés 🧠", "body": "De nouvelles questions sont en ligne et les joueurs visent le sommet. Sauras-tu les battre ?"},
+      "es": {"title": "Nuevos quizzes disponibles 🧠", "body": "Hay preguntas nuevas y los jugadores compiten por los mejores puntajes. ¿Puedes ganarles?"},
+      "ja": {"title": "新しいクイズが登場 🧠", "body": "新問題が公開、みんなが高得点を狙って競争中。あなたは勝てる？"},
+      "pt": {"title": "Novos quizzes acabaram de sair 🧠", "body": "Novas perguntas estão no ar e os jogadores disputam as melhores pontuações. Consegues vencê-los?"}
+    },
+    {
+      "en": {"title": "A challenger appears 👀", "body": "Players are racing for the high score. Come back and prove your knowledge!"},
+      "fr": {"title": "Un adversaire se présente 👀", "body": "Les joueurs se disputent le meilleur score. Reviens prouver tes connaissances !"},
+      "es": {"title": "Aparece un rival 👀", "body": "Los jugadores compiten por la puntuación más alta. ¡Vuelve y demuestra lo que sabes!"},
+      "ja": {"title": "挑戦者が現れた 👀", "body": "みんなが高得点を競っています。戻って知識を証明しよう！"},
+      "pt": {"title": "Surge um desafiante 👀", "body": "Os jogadores disputam a pontuação mais alta. Volta e prova o teu conhecimento!"}
+    },
+    {
+      "en": {"title": "Beat your high score? 🔥", "body": "You are one quiz away from a new record. Take it on right now!"},
+      "fr": {"title": "Bats ton record ? 🔥", "body": "Il te manque un quiz pour un nouveau record. Lance-toi maintenant !"},
+      "es": {"title": "¿Superas tu récord? 🔥", "body": "Estás a un quiz de un nuevo récord. ¡Hazlo ahora mismo!"},
+      "ja": {"title": "自己ベスト更新なるか？ 🔥", "body": "あと1クイズで自己新記録。今すぐ挑戦しよう！"},
+      "pt": {"title": "Bates o teu recorde? 🔥", "body": "Estás a um quiz de um novo recorde. Encara-o agora mesmo!"}
+    },
+    {
+      "en": {"title": "Weekend quiz night ⚡️", "body": "Players are climbing the ranks this weekend. Move up before it wraps!"},
+      "fr": {"title": "Soirée quiz du week-end ⚡️", "body": "Les joueurs grimpent au classement ce week-end. Monte avant la fin !"},
+      "es": {"title": "Noche de quiz del finde ⚡️", "body": "Los jugadores suben en la clasificación este fin de semana. ¡Sube antes de que acabe!"},
+      "ja": {"title": "週末のクイズナイト ⚡️", "body": "今週末はみんなが順位を上げています。終わる前にランクアップ！"},
+      "pt": {"title": "Noite de quiz ao fim de semana ⚡️", "body": "Os jogadores estão a subir no ranking este fim de semana. Sobe antes que termine!"}
+    },
+    {
+      "en": {"title": "We saved you a seat 💙", "body": "New questions are waiting and your rank is cooling. Come play a quick round!"},
+      "fr": {"title": "On t'a gardé une place 💙", "body": "De nouvelles questions t'attendent et ton rang refroidit. Reviens pour une partie rapide !"},
+      "es": {"title": "Te guardamos un sitio 💙", "body": "Hay preguntas nuevas esperando y tu puesto se enfría. ¡Vuelve para una partida rápida!"},
+      "ja": {"title": "席を用意しています 💙", "body": "新しい問題が待っていて、順位も冷めてきています。サッと1回遊びに戻ろう！"},
+      "pt": {"title": "Guardámos-te um lugar 💙", "body": "Novas perguntas esperam por ti e o teu lugar está a arrefecer. Volta para uma partida rápida!"}
+    }
+  ]
+}

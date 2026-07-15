@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Games retention-push service (Coolify/Hetzner).
 
-Moved off the Mac launchd cron. Sends a rotating competitive/leaderboard push to
-every opted-in player across Maze Glass, Bloom, Trivio, on a schedule, and exposes
-a small practical web UI to see reach, preview, and send on demand.
+Moved off the Mac launchd cron. Sends a rotating, PER-APP competitive/leaderboard
+push to every opted-in player across Maze Glass, Bloom, Trivio, on a schedule, and
+exposes a small web UI that shows each app's own message and can send on demand.
 
 AUTH: reuses the Firebase CLI OAuth (Leon, cloud-platform scope -> Firestore + FCM
 v1) via a refresh token set in FIREBASE_REFRESH_TOKEN. The stored access token is
@@ -11,9 +11,7 @@ always short-lived so we refresh on every use.
 """
 from __future__ import annotations
 import json, os, time, threading, datetime, pathlib
-from typing import Any
 
-import requests
 from fastapi import FastAPI, Body
 from fastapi.responses import HTMLResponse, JSONResponse
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -32,15 +30,30 @@ GAMES = {
 }
 TZ = os.environ.get("TZ", "Europe/Paris")
 HERE = pathlib.Path(__file__).parent
-CAMPAIGNS: list[dict] = json.load(open(HERE / "campaigns.json"))
+# Per-app campaign banks: { "Maze Glass": [ {en:{title,body}, fr:{...}, ...}, ... ], ... }
+CAMPAIGNS: dict[str, list[dict]] = json.load(open(HERE / "campaigns.json"))
+LOCALES = ["en", "fr", "es", "ja", "pt"]
 FALLBACK = "en"
-LOG_PATH = pathlib.Path("/data/sendlog.json")   # persisted across restarts if /data is a volume
+LOG_PATH = pathlib.Path("/data/sendlog.json")   # persisted if /data is a volume
 _LOG_LOCK = threading.Lock()
 
 
 def short_locale(loc: str) -> str:
     base = (loc or "en").split("-")[0].lower()
-    return base if any(base in c for c in CAMPAIGNS) or base in CAMPAIGNS[0] else FALLBACK
+    return base if base in LOCALES else FALLBACK
+
+
+def num_campaigns() -> int:
+    return min(len(v) for v in CAMPAIGNS.values())
+
+
+def current_index() -> int:
+    return (int(time.time()) // 86400) % num_campaigns()
+
+
+def message_for(app: str, idx: int) -> dict:
+    lst = CAMPAIGNS[app]
+    return lst[idx % len(lst)]
 
 
 def creds():
@@ -52,11 +65,6 @@ def creds():
                     scopes=["https://www.googleapis.com/auth/cloud-platform"])
     c.refresh(Request())
     return c
-
-
-def campaign_for_now() -> tuple[int, dict]:
-    idx = (int(time.time()) // 86400) % len(CAMPAIGNS)
-    return idx, CAMPAIGNS[idx]
 
 
 def read_tokens(project: str, c) -> dict[str, list[str]]:
@@ -73,14 +81,18 @@ def read_tokens(project: str, c) -> dict[str, list[str]]:
     return by_locale
 
 
-def do_send(payloads: dict, dry: bool) -> dict:
+def do_send(idx: int, dry: bool, only_app: str | None = None) -> dict:
     c = creds()
     sess = None
     if not dry:
         from google.auth.transport.requests import AuthorizedSession
         sess = AuthorizedSession(c)
-    result = {"dry": dry, "at": datetime.datetime.now().isoformat(timespec="seconds"), "games": {}}
+    result = {"dry": dry, "at": datetime.datetime.now().isoformat(timespec="seconds"),
+              "campaignIndex": idx, "games": {}}
     for name, project in GAMES.items():
+        if only_app and name != only_app:
+            continue
+        payloads = message_for(name, idx)
         try:
             by_locale = read_tokens(project, c)
         except Exception as e:
@@ -101,6 +113,7 @@ def do_send(payloads: dict, dry: bool) -> dict:
                     else: fail += 1
                     time.sleep(0.05)
         result["games"][name] = {"tokens": total, "sent": sent, "failed": fail,
+                                 "title": payloads[FALLBACK]["title"],
                                  "byLocale": {k: len(v) for k, v in by_locale.items()}}
     if not dry:
         _append_log(result)
@@ -126,12 +139,10 @@ def recent_log() -> list:
 
 
 def scheduled_job():
-    _, camp = campaign_for_now()
-    do_send(camp, dry=False)
+    do_send(current_index(), dry=False)
 
 
 scheduler = BackgroundScheduler(timezone=TZ)
-# Tue / Thu / Sun at 19:00 local.
 scheduler.add_job(scheduled_job, CronTrigger(day_of_week="tue,thu,sun", hour=19, minute=0), id="retention")
 scheduler.start()
 
@@ -140,23 +151,24 @@ app = FastAPI(title="Games Push")
 
 @app.get("/api/status")
 def status():
-    idx, camp = campaign_for_now()
+    idx = current_index()
     nxt = scheduler.get_job("retention").next_run_time
     return JSONResponse({
         "games": list(GAMES.keys()),
-        "campaignIndex": idx, "campaignCount": len(CAMPAIGNS),
-        "campaign": camp, "nextRun": nxt.isoformat() if nxt else None,
-        "tz": TZ, "log": recent_log()[:10],
-        "authConfigured": bool(REFRESH_TOKEN),
+        "campaignIndex": idx, "campaignCount": num_campaigns(),
+        "messages": {name: message_for(name, idx) for name in GAMES},
+        "nextRun": nxt.isoformat() if nxt else None,
+        "tz": TZ, "log": recent_log()[:10], "authConfigured": bool(REFRESH_TOKEN),
     })
 
 
 @app.post("/api/send")
 def send(body: dict = Body(default={})):
     dry = bool(body.get("dry", True))
-    idx = body.get("campaignIndex")
-    camp = CAMPAIGNS[idx] if isinstance(idx, int) and 0 <= idx < len(CAMPAIGNS) else campaign_for_now()[1]
-    return JSONResponse(do_send(camp, dry=dry))
+    i = body.get("campaignIndex")
+    idx = i if isinstance(i, int) and 0 <= i < num_campaigns() else current_index()
+    only = body.get("app")
+    return JSONResponse(do_send(idx, dry=dry, only_app=only if only in GAMES else None))
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -167,47 +179,58 @@ def home():
 HTML = """<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
 <title>Games Push</title><style>
 :root{color-scheme:dark}body{margin:0;font:15px/1.5 -apple-system,system-ui,sans-serif;background:#0f1115;color:#e6e8ec}
-.wrap{max-width:760px;margin:0 auto;padding:24px 16px 60px}h1{font-size:20px;margin:0 0 4px}.sub{color:#8b93a1;font-size:13px;margin-bottom:20px}
+.wrap{max-width:780px;margin:0 auto;padding:24px 16px 60px}h1{font-size:20px;margin:0 0 4px}.sub{color:#8b93a1;font-size:13px;margin-bottom:20px}
 .card{background:#171a21;border:1px solid #232833;border-radius:14px;padding:16px;margin-bottom:14px}
-.row{display:flex;justify-content:space-between;align-items:center;gap:12px}.muted{color:#8b93a1;font-size:13px}
-.big{font-size:26px;font-weight:700}.games{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
-.g{background:#12151b;border:1px solid #232833;border-radius:10px;padding:10px;text-align:center}.g b{display:block;font-size:22px}
-.btn{border:0;border-radius:10px;padding:10px 16px;font-weight:600;cursor:pointer;font-size:14px}
-.btn.primary{background:#3b82f6;color:#fff}.btn.ghost{background:#232833;color:#e6e8ec}.btn:disabled{opacity:.5;cursor:default}
-.msg{background:#12151b;border-radius:10px;padding:10px 12px;margin-top:8px;font-size:13px}.msg b{color:#cdd3dc}
-pre{white-space:pre-wrap;word-break:break-word;font-size:12px;color:#9aa3b2;margin:8px 0 0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.muted{color:#8b93a1;font-size:13px}
+.big{font-size:22px;font-weight:700}
+.btn{border:0;border-radius:10px;padding:9px 15px;font-weight:600;cursor:pointer;font-size:13px}
+.btn.primary{background:#3b82f6;color:#fff}.btn.ghost{background:#232833;color:#e6e8ec}.btn.sm{padding:6px 12px;font-size:12px}.btn:disabled{opacity:.5;cursor:default}
+.app{border-top:1px solid #232833;padding:14px 0}.app:first-of-type{border-top:0}
+.appname{font-weight:700;display:flex;align-items:center;gap:8px}.count{font-size:12px;color:#8b93a1;background:#12151b;border:1px solid #232833;padding:2px 8px;border-radius:99px}
+.mtitle{color:#cdd3dc;font-weight:600;margin-top:6px}.mbody{color:#aab2c0;font-size:13px}
 .pill{font-size:11px;padding:2px 8px;border-radius:99px;background:#232833;color:#8b93a1}
-h2{font-size:14px;color:#8b93a1;margin:22px 0 8px;text-transform:uppercase;letter-spacing:.04em}
-.logrow{border-bottom:1px solid #232833;padding:8px 0;font-size:13px}.ok{color:#4ade80}
+h2{font-size:13px;color:#8b93a1;margin:22px 0 8px;text-transform:uppercase;letter-spacing:.04em}
+.logrow{border-bottom:1px solid #232833;padding:8px 0;font-size:13px;color:#aab2c0}
+pre{white-space:pre-wrap;word-break:break-word;font-size:12px;color:#9aa3b2;margin:8px 0 0}
+.actions{display:flex;gap:8px;align-items:center;margin-top:8px}
 </style></head><body><div class=wrap>
-<h1>Games Push</h1><div class=sub>Retention notifications for Maze Glass, Bloom, Trivio</div>
+<h1>Games Push</h1><div class=sub>Retention notifications — each app gets its own message</div>
 <div class=card><div class=row><div><div class=muted>Next scheduled send</div><div class=big id=next>…</div></div>
-<span class=pill id=tz></span></div>
-<div class=games id=games></div></div>
-<div class=card><div class=row><div><div class=muted>Current campaign (rotates every day)</div>
-<div id=campmeta class=muted></div></div></div>
-<div class=msg><b id=ctitle></b><br><span id=cbody></span></div>
-<div style="margin-top:14px;display:flex;gap:10px">
-<button class="btn ghost" id=dry>Preview reach (dry run)</button>
-<button class="btn primary" id=send>Send now</button></div>
-<pre id=out></pre></div>
+<div class=row><span class=pill id=camp></span><span class=pill id=tz></span>
+<button class="btn ghost sm" id=dryall>Dry run all</button><button class="btn primary sm" id=sendall>Send all now</button></div></div>
+<pre id=allout></pre></div>
+
+<div class=card id=apps></div>
+
 <h2>Recent sends</h2><div id=log></div>
 </div><script>
-const $=s=>document.querySelector(s);
-async function load(){const r=await fetch('api/status');const d=await r.json();
+const $=s=>document.querySelector(s);let ST=null;
+async function load(){const r=await fetch('api/status');const d=await r.json();ST=d;
  $('#next').textContent=d.nextRun?new Date(d.nextRun).toLocaleString():'—';
+ $('#camp').textContent='Campaign '+(d.campaignIndex+1)+' / '+d.campaignCount;
  $('#tz').textContent=d.tz+(d.authConfigured?'':' · NO AUTH');
- $('#games').innerHTML=d.games.map(g=>`<div class=g><b>${g[0]}</b><span class=muted>${g}</span></div>`).join('');
- $('#campmeta').textContent='#'+(d.campaignIndex+1)+' of '+d.campaignCount;
- const c=d.campaign.en||Object.values(d.campaign)[0];$('#ctitle').textContent=c.title;$('#cbody').textContent=c.body;
- $('#log').innerHTML=(d.log||[]).map(e=>{const g=Object.entries(e.games).map(([n,v])=>`${n}: ${v.sent??0}✓`).join('  ');
+ $('#apps').innerHTML=d.games.map(g=>{const m=(d.messages[g].en)||Object.values(d.messages[g])[0];
+   return `<div class=app><div class=row><div class=appname>${g}</div><span class=count id="c_${g.replace(/\\s/g,'')}">…</span></div>
+   <div class=mtitle>${m.title}</div><div class=mbody>${m.body}</div>
+   <div class=actions><button class="btn ghost sm" onclick="one('${g}',true)">Preview reach</button>
+   <button class="btn primary sm" onclick="one('${g}',false)">Send to ${g}</button>
+   <span class=muted id="o_${g.replace(/\\s/g,'')}"></span></div></div>`}).join('');
+ $('#log').innerHTML=(d.log||[]).map(e=>{const g=Object.entries(e.games).map(([n,v])=>`${n} ${v.sent??0}✓`).join(' · ');
    return `<div class=logrow>${new Date(e.at).toLocaleString()} — ${g}</div>`}).join('')||'<div class=muted>No sends yet.</div>';
+ // fill live counts via a dry run in the background (once)
+ if(!load._counted){load._counted=true;dryAll(true)}
 }
-async function run(dry){$('#out').textContent='Working…';$('#dry').disabled=$('#send').disabled=true;
- try{const r=await fetch('api/send',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({dry})});
- const d=await r.json();$('#out').textContent=JSON.stringify(d.games,null,2);}catch(e){$('#out').textContent=e}
- $('#dry').disabled=$('#send').disabled=false;load()}
-$('#dry').onclick=()=>run(true);
-$('#send').onclick=()=>{if(confirm('Send this campaign to all opted-in players now?'))run(false)};
+async function post(b){const r=await fetch('api/send',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(b)});return r.json()}
+async function one(app,dry){const el=$('#o_'+app.replace(/\\s/g,''));el.textContent=' working…';
+ try{const d=await post({dry,app});const v=d.games[app]||{};el.textContent=dry?` reach: ${v.tokens??0}`:` sent ${v.sent??0} / failed ${v.failed??0}`;
+  const c=$('#c_'+app.replace(/\\s/g,''));if(c&&v.tokens!=null)c.textContent=v.tokens+' opted in';if(!dry)load()}catch(e){el.textContent=' error'}}
+async function dryAll(quiet){if(!quiet){$('#allout').textContent='Working…';$('#dryall').disabled=$('#sendall').disabled=true}
+ try{const d=await post({dry:true});for(const [g,v] of Object.entries(d.games)){const c=$('#c_'+g.replace(/\\s/g,''));if(c)c.textContent=(v.tokens??0)+' opted in'}
+  if(!quiet)$('#allout').textContent='Reach: '+Object.entries(d.games).map(([g,v])=>`${g} ${v.tokens??0}`).join(' · ')}catch(e){if(!quiet)$('#allout').textContent=e}
+ $('#dryall').disabled=$('#sendall').disabled=false}
+$('#dryall').onclick=()=>dryAll(false);
+$('#sendall').onclick=async()=>{if(!confirm('Send each app its own campaign to all opted-in players now?'))return;
+ $('#allout').textContent='Sending…';$('#sendall').disabled=true;const d=await post({dry:false});
+ $('#allout').textContent='Sent: '+Object.entries(d.games).map(([g,v])=>`${g} ${v.sent??0}✓`).join(' · ');$('#sendall').disabled=false;load()};
 load();setInterval(load,30000);
 </script></body></html>"""
