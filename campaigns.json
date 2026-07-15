@@ -1,0 +1,37 @@
+[
+  {
+    "en": {"title": "New challengers are climbing 🏆", "body": "The competition is heating up and new players keep joining. Jump back in and defend your spot on the leaderboard!"},
+    "fr": {"title": "De nouveaux joueurs arrivent 🏆", "body": "La compétition monte d'un cran et de nouveaux joueurs rejoignent le classement. Reviens vite défendre ta place !"},
+    "es": {"title": "Llegan nuevos rivales 🏆", "body": "La competición se pone dura y se unen nuevos jugadores. ¡Vuelve y defiende tu puesto en la clasificación!"},
+    "ja": {"title": "新たな挑戦者が登場 🏆", "body": "競争が激しくなり、新しいプレイヤーが続々と参加中。戻ってランキングの座を守ろう！"},
+    "pt": {"title": "Novos desafiantes a subir 🏆", "body": "A competição está a ficar mais difícil e novos jogadores continuam a entrar. Volta e defende o teu lugar no ranking!"}
+  },
+  {
+    "en": {"title": "Someone is after your rank 👀", "body": "A player is closing in on your best score. Come back and put them in their place!"},
+    "fr": {"title": "Ton rang est menacé 👀", "body": "Un joueur se rapproche de ton meilleur score. Reviens vite lui montrer qui commande !"},
+    "es": {"title": "Alguien va por tu puesto 👀", "body": "Un jugador se acerca a tu mejor puntuación. ¡Vuelve y ponlo en su sitio!"},
+    "ja": {"title": "順位が狙われています 👀", "body": "あるプレイヤーがあなたのベストスコアに迫っています。戻って実力を見せつけよう！"},
+    "pt": {"title": "Alguém quer o teu lugar 👀", "body": "Um jogador está a chegar perto da tua melhor pontuação. Volta e mostra quem manda!"}
+  },
+  {
+    "en": {"title": "Can you beat your best? 🔥", "body": "You are one run away from a new personal record. Give it a shot right now!"},
+    "fr": {"title": "Bats ton record ? 🔥", "body": "Il te manque une partie pour un nouveau record perso. Tente le coup maintenant !"},
+    "es": {"title": "¿Superas tu récord? 🔥", "body": "Estás a una partida de un nuevo récord personal. ¡Inténtalo ahora mismo!"},
+    "ja": {"title": "自己ベスト更新なるか？ 🔥", "body": "あと1回で自己新記録。今すぐ挑戦しよう！"},
+    "pt": {"title": "Bates o teu recorde? 🔥", "body": "Estás a uma partida de um novo recorde pessoal. Tenta agora mesmo!"}
+  },
+  {
+    "en": {"title": "Weekend challenge is on ⚡️", "body": "Players are grinding for the top this weekend. Climb the ranks before it resets!"},
+    "fr": {"title": "Défi du week-end ⚡️", "body": "Les joueurs se battent pour le sommet ce week-end. Grimpe au classement avant la fin !"},
+    "es": {"title": "Reto del fin de semana ⚡️", "body": "Los jugadores luchan por la cima este fin de semana. ¡Sube en la clasificación antes de que acabe!"},
+    "ja": {"title": "週末チャレンジ開催中 ⚡️", "body": "今週末はみんなが頂点を目指して奮闘中。リセット前にランクを上げよう！"},
+    "pt": {"title": "Desafio de fim de semana ⚡️", "body": "Os jogadores estão a lutar pelo topo este fim de semana. Sobe no ranking antes que reinicie!"}
+  },
+  {
+    "en": {"title": "We miss you 💙", "body": "Your spot on the leaderboard is getting cold. Come back for a quick run and reclaim it!"},
+    "fr": {"title": "Tu nous manques 💙", "body": "Ta place au classement refroidit. Reviens pour une partie rapide et reprends-la !"},
+    "es": {"title": "Te echamos de menos 💙", "body": "Tu puesto en la clasificación se enfría. ¡Vuelve para una partida rápida y recupéralo!"},
+    "ja": {"title": "お待ちしています 💙", "body": "ランキングでのあなたの座が冷めてきています。サッと1回プレイして取り戻そう！"},
+    "pt": {"title": "Sentimos a tua falta 💙", "body": "O teu lugar no ranking está a arrefecer. Volta para uma partida rápida e reconquista-o!"}
+  }
+]
