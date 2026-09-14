@@ -120,24 +120,24 @@
     {
       "kind": "leaderboard",
       "en": {
-        "title": "New gardeners are blooming 🌸",
-        "body": "New players are growing bigger gardens and climbing the leaderboard. Jump back in and defend your rank!"
+        "title": "The World Ladder is waiting 🌍",
+        "body": "Top players, ranked by score. See where your best sits today."
       },
       "fr": {
-        "title": "De nouveaux jardiniers fleurissent 🌸",
-        "body": "De nouveaux joueurs font pousser de plus grands jardins et grimpent au classement. Reviens défendre ton rang !"
+        "title": "Le classement mondial t'attend 🌍",
+        "body": "Top joueurs, classés par score. Regarde où se place ton meilleur score."
       },
       "es": {
-        "title": "Nuevos jardineros florecen 🌸",
-        "body": "Nuevos jugadores cultivan jardines más grandes y suben en la clasificación. ¡Vuelve y defiende tu puesto!"
+        "title": "La clasificación mundial te espera 🌍",
+        "body": "Mejores jugadores, ordenados por puntuación. Mira dónde queda tu mejor puntuación."
       },
       "ja": {
-        "title": "新しい庭師が続々 🌸",
-        "body": "新しいプレイヤーがより大きな庭を育ててランキングを上昇中。戻って順位を守ろう！"
+        "title": "ワールドランキングが待っています 🌍",
+        "body": "スコア順のトッププレイヤー。自分のベストスコアの位置を見てみよう。"
       },
       "pt": {
-        "title": "Novos jardineiros a florescer 🌸",
-        "body": "Novos jogadores cultivam jardins maiores e sobem no ranking. Volta e defende o teu lugar!"
+        "title": "O ranking mundial está à espera 🌍",
+        "body": "Top jogadores, ordenados por pontuação. Vê onde fica a tua melhor pontuação."
       }
     },
     {
@@ -166,70 +166,70 @@
     {
       "kind": "play",
       "en": {
-        "title": "Grow your biggest garden? 🌱",
-        "body": "You are one run from a new personal best. Give it a try right now!"
+        "title": "Push your best higher? 🌱",
+        "body": "One run is all it takes. Swipe to slide the plants and grow the next stage."
       },
       "fr": {
-        "title": "Fais pousser ton plus grand jardin ? 🌱",
-        "body": "Il te manque une partie pour un nouveau record perso. Tente le coup maintenant !"
+        "title": "Améliorer ton meilleur score ? 🌱",
+        "body": "Une manche suffit. Glisse pour pousser les plantes et fais fleurir l'étape suivante."
       },
       "es": {
-        "title": "¿Cultivas tu mayor jardín? 🌱",
-        "body": "Estás a una partida de un nuevo récord personal. ¡Inténtalo ahora mismo!"
+        "title": "¿Superar tu mejor puntuación? 🌱",
+        "body": "Basta una partida. Desliza para mover las plantas y crece a la etapa siguiente."
       },
       "ja": {
-        "title": "自己最大の庭を育てる？ 🌱",
-        "body": "あと1回で自己ベスト更新。今すぐ挑戦しよう！"
+        "title": "ベストスコアを更新する？ 🌱",
+        "body": "1プレイで十分。スワイプして植物をスライドし、次の段階へ育てよう。"
       },
       "pt": {
-        "title": "Cultivas o teu maior jardim? 🌱",
-        "body": "Estás a uma partida de um novo recorde pessoal. Tenta agora mesmo!"
+        "title": "Bater a tua melhor pontuação? 🌱",
+        "body": "Basta uma partida. Desliza para mover as plantas e cresce para o próximo estágio."
       }
     },
     {
       "kind": "leaderboard",
       "en": {
-        "title": "Weekend bloom challenge ⚡️",
-        "body": "Players are climbing the garden leaderboard this weekend. Move up before it resets!"
+        "title": "Where do you stand? 🏆",
+        "body": "The World Ladder ranks every player by score. Check your row and see who is above you."
       },
       "fr": {
-        "title": "Défi floraison du week-end ⚡️",
-        "body": "Les joueurs grimpent au classement des jardins ce week-end. Monte avant la fin !"
+        "title": "Tu te situes où ? 🏆",
+        "body": "Le classement mondial range chaque joueur par score. Regarde ta ligne et qui te précède."
       },
       "es": {
-        "title": "Reto de floración del finde ⚡️",
-        "body": "Los jugadores suben en la clasificación de jardines este fin de semana. ¡Sube antes de que acabe!"
+        "title": "¿En qué puesto estás? 🏆",
+        "body": "La clasificación mundial ordena a los jugadores por puntuación. Mira tu fila y quién va por delante."
       },
       "ja": {
-        "title": "週末の開花チャレンジ ⚡️",
-        "body": "今週末はみんなが庭のランキングを上げています。リセット前にランクアップ！"
+        "title": "今の順位は？ 🏆",
+        "body": "ワールドランキングはスコア順。自分の行と、上にいるプレイヤーを確かめよう。"
       },
       "pt": {
-        "title": "Desafio de floração ao fim de semana ⚡️",
-        "body": "Os jogadores estão a subir no ranking dos jardins este fim de semana. Sobe antes que reinicie!"
+        "title": "Em que lugar estás? 🏆",
+        "body": "O ranking mundial ordena os jogadores por pontuação. Vê a tua linha e quem está à frente."
       }
     },
     {
       "kind": "play",
       "en": {
-        "title": "One more merge? 🌱",
-        "body": "Match the plants and push for a higher tier. A quick run is all it takes."
+        "title": "Pick up where you left off 💙",
+        "body": "Your progress is saved. Tap RESUME and grow the next stage."
       },
       "fr": {
-        "title": "Une fusion de plus ? 🌱",
-        "body": "Associe les plantes et vise un niveau plus haut. Une manche rapide suffit."
+        "title": "Reprends où tu t'es arrêté 💙",
+        "body": "Ta progression est sauvegardée. Touche REPRENDRE et fais fleurir l'étape suivante."
       },
       "es": {
-        "title": "¿Una fusión más? 🌱",
-        "body": "Combina las plantas y apunta a un nivel más alto. Basta con una partida rápida."
+        "title": "Continúa donde lo dejaste 💙",
+        "body": "Tu progreso se guardó. Toca CONTINUAR y crece a la etapa siguiente."
       },
       "ja": {
-        "title": "もう一度マージ？ 🌱",
-        "body": "植物を合わせて、より高いティアを目指そう。短い1プレイで十分です。"
+        "title": "つづきから遊ぼう 💙",
+        "body": "進行は保存されています。「つづける」で次の段階へ育てよう。"
       },
       "pt": {
-        "title": "Mais uma fusão? 🌱",
-        "body": "Combina as plantas e tenta chegar a um nível mais alto. Basta uma partida rápida."
+        "title": "Continua de onde paraste 💙",
+        "body": "O teu progresso está guardado. Toca em CONTINUAR e cresce para o próximo estágio."
       }
     }
   ],
