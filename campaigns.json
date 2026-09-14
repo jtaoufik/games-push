@@ -212,24 +212,24 @@
     {
       "kind": "play",
       "en": {
-        "title": "Your garden misses you 💙",
-        "body": "Your plants are waiting and your rank is cooling. Come grow one more!"
+        "title": "One more merge? 🌱",
+        "body": "Match the plants and push for a higher tier. A quick run is all it takes."
       },
       "fr": {
-        "title": "Ton jardin te manque 💙",
-        "body": "Tes plantes t'attendent et ton rang refroidit. Reviens en faire pousser un de plus !"
+        "title": "Une fusion de plus ? 🌱",
+        "body": "Associe les plantes et vise un niveau plus haut. Une manche rapide suffit."
       },
       "es": {
-        "title": "Tu jardín te echa de menos 💙",
-        "body": "Tus plantas te esperan y tu puesto se enfría. ¡Vuelve y cultiva uno más!"
+        "title": "¿Una fusión más? 🌱",
+        "body": "Combina las plantas y apunta a un nivel más alto. Basta con una partida rápida."
       },
       "ja": {
-        "title": "あなたの庭が待っています 💙",
-        "body": "植物が待っていて、順位も冷めてきています。もう一つ育てに戻ろう！"
+        "title": "もう一度マージ？ 🌱",
+        "body": "植物を合わせて、より高いティアを目指そう。短い1プレイで十分です。"
       },
       "pt": {
-        "title": "O teu jardim sente a tua falta 💙",
-        "body": "As tuas plantas esperam por ti e o teu lugar está a arrefecer. Volta e cultiva mais um!"
+        "title": "Mais uma fusão? 🌱",
+        "body": "Combina as plantas e tenta chegar a um nível mais alto. Basta uma partida rápida."
       }
     }
   ],
@@ -237,116 +237,116 @@
     {
       "kind": "play",
       "en": {
-        "title": "New quizzes just dropped 🧠",
-        "body": "Fresh questions are live and players are racing for the top scores. Can you beat them?"
+        "title": "20 topics, one quiz 🧠",
+        "body": "From space to pop culture, thousands of questions are loaded and ready. Pick a topic and play a round."
       },
       "fr": {
-        "title": "De nouveaux quiz sont arrivés 🧠",
-        "body": "De nouvelles questions sont en ligne et les joueurs visent le sommet. Sauras-tu les battre ?"
+        "title": "20 thèmes, un quiz 🧠",
+        "body": "De l'espace à la pop culture, des milliers de questions sont prêtes. Choisis un thème et lance une manche."
       },
       "es": {
-        "title": "Nuevos quizzes disponibles 🧠",
-        "body": "Hay preguntas nuevas y los jugadores compiten por los mejores puntajes. ¿Puedes ganarles?"
+        "title": "20 temas, un quiz 🧠",
+        "body": "Del espacio a la cultura pop, miles de preguntas están listas. Elige un tema y juega una ronda."
       },
       "ja": {
-        "title": "新しいクイズが登場 🧠",
-        "body": "新問題が公開、みんなが高得点を狙って競争中。あなたは勝てる？"
+        "title": "20ジャンル、クイズ1本 🧠",
+        "body": "宇宙からポップカルチャーまで、何千もの問題が用意されています。ジャンルを選んで1ラウンド。"
       },
       "pt": {
-        "title": "Novos quizzes acabaram de sair 🧠",
-        "body": "Novas perguntas estão no ar e os jogadores disputam as melhores pontuações. Consegues vencê-los?"
+        "title": "20 temas, um quiz 🧠",
+        "body": "Do espaço à cultura pop, milhares de perguntas estão prontas. Escolhe um tema e joga uma ronda."
       }
     },
     {
       "kind": "play",
       "en": {
-        "title": "A challenger appears 👀",
-        "body": "Players are racing for the high score. Come back and prove your knowledge!"
+        "title": "Five minutes, one quiz ⚡️",
+        "body": "A quick round fits in a coffee break. Pick a topic and see how far you get."
       },
       "fr": {
-        "title": "Un adversaire se présente 👀",
-        "body": "Les joueurs se disputent le meilleur score. Reviens prouver tes connaissances !"
+        "title": "Cinq minutes, un quiz ⚡️",
+        "body": "Une manche rapide tient dans une pause café. Choisis un thème et vois jusqu'où tu vas."
       },
       "es": {
-        "title": "Aparece un rival 👀",
-        "body": "Los jugadores compiten por la puntuación más alta. ¡Vuelve y demuestra lo que sabes!"
+        "title": "Cinco minutos, un quiz ⚡️",
+        "body": "Una ronda rápida cabe en una pausa para el café. Elige un tema y mira hasta dónde llegas."
       },
       "ja": {
-        "title": "挑戦者が現れた 👀",
-        "body": "みんなが高得点を競っています。戻って知識を証明しよう！"
+        "title": "5分でクイズ1本 ⚡️",
+        "body": "短い1ラウンドはコーヒー休憩に収まります。ジャンルを選んで、どこまで行けるか試そう。"
       },
       "pt": {
-        "title": "Surge um desafiante 👀",
-        "body": "Os jogadores disputam a pontuação mais alta. Volta e prova o teu conhecimento!"
+        "title": "Cinco minutos, um quiz ⚡️",
+        "body": "Uma ronda rápida cabe numa pausa para o café. Escolhe um tema e vê até onde chegas."
       }
     },
     {
       "kind": "play",
       "en": {
-        "title": "Beat your high score? 🔥",
-        "body": "You are one quiz away from a new record. Take it on right now!"
+        "title": "Pass the phone around 📱",
+        "body": "One phone is enough to play together. Start a round and take turns answering."
       },
       "fr": {
-        "title": "Bats ton record ? 🔥",
-        "body": "Il te manque un quiz pour un nouveau record. Lance-toi maintenant !"
+        "title": "Fais tourner le téléphone 📱",
+        "body": "Un seul téléphone suffit pour jouer à plusieurs. Lance une manche et répondez chacun votre tour."
       },
       "es": {
-        "title": "¿Superas tu récord? 🔥",
-        "body": "Estás a un quiz de un nuevo récord. ¡Hazlo ahora mismo!"
+        "title": "Pasa el móvil 📱",
+        "body": "Con un solo móvil ya podéis jugar juntos. Empieza una ronda y responded por turnos."
       },
       "ja": {
-        "title": "自己ベスト更新なるか？ 🔥",
-        "body": "あと1クイズで自己新記録。今すぐ挑戦しよう！"
+        "title": "スマホを回して遊ぼう 📱",
+        "body": "1台あればみんなで遊べます。1ラウンド始めて、順番に答えよう。"
       },
       "pt": {
-        "title": "Bates o teu recorde? 🔥",
-        "body": "Estás a um quiz de um novo recorde. Encara-o agora mesmo!"
+        "title": "Passa o telemóvel 📱",
+        "body": "Um só telemóvel chega para jogarem juntos. Começa uma ronda e respondam à vez."
       }
     },
     {
       "kind": "play",
       "en": {
-        "title": "Weekend quiz night ⚡️",
-        "body": "Players are climbing the ranks this weekend. Move up before it wraps!"
+        "title": "Cinema, space or mythology? 🎬",
+        "body": "Movies, geography, video games, history. Twenty topics are sitting there. Pick one."
       },
       "fr": {
-        "title": "Soirée quiz du week-end ⚡️",
-        "body": "Les joueurs grimpent au classement ce week-end. Monte avant la fin !"
+        "title": "Cinéma, espace ou mythologie ? 🎬",
+        "body": "Films, géographie, jeux vidéo, histoire. Vingt thèmes t'attendent. Choisis-en un."
       },
       "es": {
-        "title": "Noche de quiz del finde ⚡️",
-        "body": "Los jugadores suben en la clasificación este fin de semana. ¡Sube antes de que acabe!"
+        "title": "¿Cine, espacio o mitología? 🎬",
+        "body": "Cine, geografía, videojuegos, historia. Veinte temas te esperan. Elige uno."
       },
       "ja": {
-        "title": "週末のクイズナイト ⚡️",
-        "body": "今週末はみんなが順位を上げています。終わる前にランクアップ！"
+        "title": "映画、宇宙、それとも神話？ 🎬",
+        "body": "映画、地理、ゲーム、歴史。20のジャンルが待っています。ひとつ選ぼう。"
       },
       "pt": {
-        "title": "Noite de quiz ao fim de semana ⚡️",
-        "body": "Os jogadores estão a subir no ranking este fim de semana. Sobe antes que termine!"
+        "title": "Cinema, espaço ou mitologia? 🎬",
+        "body": "Filmes, geografia, videojogos, história. Vinte temas à espera. Escolhe um."
       }
     },
     {
       "kind": "play",
       "en": {
-        "title": "We saved you a seat 💙",
-        "body": "New questions are waiting and your rank is cooling. Come play a quick round!"
+        "title": "A quiz is waiting 💙",
+        "body": "No pressure and nothing to catch up on. Open Trivio and play one round whenever you feel like it."
       },
       "fr": {
-        "title": "On t'a gardé une place 💙",
-        "body": "De nouvelles questions t'attendent et ton rang refroidit. Reviens pour une partie rapide !"
+        "title": "Un quiz t'attend 💙",
+        "body": "Aucune pression, rien à rattraper. Ouvre Trivio et joue une manche quand tu veux."
       },
       "es": {
-        "title": "Te guardamos un sitio 💙",
-        "body": "Hay preguntas nuevas esperando y tu puesto se enfría. ¡Vuelve para una partida rápida!"
+        "title": "Un quiz te espera 💙",
+        "body": "Sin prisa y sin nada que recuperar. Abre Trivio y juega una ronda cuando te apetezca."
       },
       "ja": {
-        "title": "席を用意しています 💙",
-        "body": "新しい問題が待っていて、順位も冷めてきています。サッと1回遊びに戻ろう！"
+        "title": "クイズが待っています 💙",
+        "body": "急ぐ必要もノルマもありません。好きなときにTrivioを開いて1ラウンド。"
       },
       "pt": {
-        "title": "Guardámos-te um lugar 💙",
-        "body": "Novas perguntas esperam por ti e o teu lugar está a arrefecer. Volta para uma partida rápida!"
+        "title": "Um quiz está à espera 💙",
+        "body": "Sem pressa e sem nada para recuperar. Abre o Trivio e joga uma ronda quando quiseres."
       }
     }
   ],
