@@ -3,116 +3,116 @@
     {
       "kind": "leaderboard",
       "en": {
-        "title": "New challengers are climbing 🏆",
-        "body": "The maze leaderboard is heating up and new players keep joining. Jump back in and defend your rank!"
+        "title": "Top players, total score 🏆",
+        "body": "The leaderboard ranks everyone by total score then quest level. See where you land."
       },
       "fr": {
-        "title": "De nouveaux joueurs arrivent 🏆",
-        "body": "Le classement des labyrinthes s'enflamme et de nouveaux joueurs arrivent. Reviens défendre ton rang !"
+        "title": "Top joueurs, score total 🏆",
+        "body": "Le classement range tout le monde par score total puis niveau de quête. Regarde où tu te places."
       },
       "es": {
-        "title": "Llegan nuevos rivales 🏆",
-        "body": "La clasificación de laberintos se calienta y se unen nuevos jugadores. ¡Vuelve y defiende tu puesto!"
+        "title": "Mejores jugadores, puntuación total 🏆",
+        "body": "La clasificación ordena a todos por puntuación total y nivel de misión. Mira dónde quedas."
       },
       "ja": {
-        "title": "新たな挑戦者が登場 🏆",
-        "body": "迷路ランキングが白熱、新しいプレイヤーも続々参加中。戻って順位を守ろう！"
+        "title": "トップランカー、合計スコア 🏆",
+        "body": "ランキングは合計スコアとクエストレベル順。自分の位置を見てみよう。"
       },
       "pt": {
-        "title": "Novos desafiantes a subir 🏆",
-        "body": "O ranking dos labirintos está a aquecer e novos jogadores continuam a entrar. Volta e defende o teu lugar!"
+        "title": "Melhores jogadores, pontuação total 🏆",
+        "body": "A classificação ordena todos por pontuação total e nível de missão. Vê onde ficas."
       }
     },
     {
       "kind": "leaderboard",
       "en": {
-        "title": "Someone is after your rank 👀",
-        "body": "A player is closing in on your best time. Come back and put them in their place!"
+        "title": "How does your time rank? ⏱",
+        "body": "Every maze has its own board, ranked by score: time plus steps. Check the one you played last."
       },
       "fr": {
-        "title": "Ton rang est menacé 👀",
-        "body": "Un joueur se rapproche de ton meilleur temps. Reviens vite lui montrer qui commande !"
+        "title": "Ton temps vaut quoi ? ⏱",
+        "body": "Chaque labyrinthe a son classement, par score : temps plus pas. Va voir celui que tu as fait en dernier."
       },
       "es": {
-        "title": "Alguien va por tu puesto 👀",
-        "body": "Un jugador se acerca a tu mejor tiempo. ¡Vuelve y ponlo en su sitio!"
+        "title": "¿Cómo va tu tiempo? ⏱",
+        "body": "Cada laberinto tiene su clasificación por puntuación: tiempo más pasos. Mira el que jugaste la última vez."
       },
       "ja": {
-        "title": "順位が狙われています 👀",
-        "body": "あるプレイヤーがあなたのベストタイムに迫っています。戻って実力を見せよう！"
+        "title": "あなたのタイムは何位？ ⏱",
+        "body": "迷路ごとにランキングがあります。スコアはタイム＋歩数。最後に遊んだ迷路を見てみよう。"
       },
       "pt": {
-        "title": "Alguém quer o teu lugar 👀",
-        "body": "Um jogador está a chegar perto do teu melhor tempo. Volta e mostra quem manda!"
+        "title": "O teu tempo vale quanto? ⏱",
+        "body": "Cada labirinto tem a sua classificação por pontuação: tempo mais passos. Vê o último que jogaste."
       }
     },
     {
       "kind": "play",
       "en": {
-        "title": "Beat your best time? 🔥",
-        "body": "You are one run away from a new record. Solve a maze right now!"
+        "title": "Beat your best time? ⏱",
+        "body": "Your time sits on every level card. Pick a maze and try to take it down."
       },
       "fr": {
-        "title": "Bats ton meilleur temps ? 🔥",
-        "body": "Il te manque une partie pour un nouveau record. Résous un labyrinthe maintenant !"
+        "title": "Battre ton meilleur temps ? ⏱",
+        "body": "Ton temps est affiché sur chaque niveau. Choisis un labyrinthe et essaie de faire mieux."
       },
       "es": {
-        "title": "¿Superas tu mejor tiempo? 🔥",
-        "body": "Estás a una partida de un nuevo récord. ¡Resuelve un laberinto ahora!"
+        "title": "¿Superar tu tiempo? ⏱",
+        "body": "Tu tiempo aparece en cada nivel. Elige un laberinto e intenta mejorarlo."
       },
       "ja": {
-        "title": "自己ベスト更新なるか？ 🔥",
-        "body": "あと1回で自己新記録。今すぐ迷路に挑戦しよう！"
+        "title": "自己ベストを更新する？ ⏱",
+        "body": "各レベルにあなたのタイムが表示されています。迷路を選んで更新を狙おう。"
       },
       "pt": {
-        "title": "Bates o teu melhor tempo? 🔥",
-        "body": "Estás a uma partida de um novo recorde. Resolve um labirinto agora!"
+        "title": "Bater o teu melhor tempo? ⏱",
+        "body": "O teu tempo aparece em cada nível. Escolhe um labirinto e tenta melhorá-lo."
       }
     },
     {
       "kind": "leaderboard",
       "en": {
-        "title": "Weekend maze challenge ⚡️",
-        "body": "Players are climbing the ranks this weekend. Move up before it resets!"
+        "title": "Shorter route, better score 🧭",
+        "body": "Score is time plus steps, so a cleaner path climbs the leaderboard. See how the board is built."
       },
       "fr": {
-        "title": "Défi labyrinthe du week-end ⚡️",
-        "body": "Les joueurs grimpent au classement ce week-end. Monte avant la fin !"
+        "title": "Trajet plus court, meilleur score 🧭",
+        "body": "Le score, c'est temps plus pas : un chemin plus court fait monter au classement. Regarde comment il se compose."
       },
       "es": {
-        "title": "Reto de laberintos del finde ⚡️",
-        "body": "Los jugadores suben en la clasificación este fin de semana. ¡Sube antes de que acabe!"
+        "title": "Ruta más corta, mejor puntuación 🧭",
+        "body": "La puntuación es tiempo más pasos, así que un camino más limpio sube en la clasificación. Mira cómo se forma."
       },
       "ja": {
-        "title": "週末の迷路チャレンジ ⚡️",
-        "body": "今週末はみんなが順位を上げています。リセット前にランクアップ！"
+        "title": "近道はスコアになる 🧭",
+        "body": "スコアはタイム＋歩数。短い経路ほどランキングが上がります。順位の仕組みを見てみよう。"
       },
       "pt": {
-        "title": "Desafio de labirintos ao fim de semana ⚡️",
-        "body": "Os jogadores estão a subir no ranking este fim de semana. Sobe antes que reinicie!"
+        "title": "Caminho mais curto, melhor pontuação 🧭",
+        "body": "A pontuação é tempo mais passos, por isso um caminho mais limpo sobe na classificação. Vê como se forma."
       }
     },
     {
       "kind": "play",
       "en": {
-        "title": "Your maze awaits 💙",
-        "body": "Your spot on the leaderboard is getting cold. Come solve a quick one and reclaim it!"
+        "title": "A maze is waiting 💙",
+        "body": "Pick a level and trace your line to the exit. One quick solve is all it takes."
       },
       "fr": {
-        "title": "Ton labyrinthe t'attend 💙",
-        "body": "Ta place au classement refroidit. Reviens résoudre un labyrinthe et reprends-la !"
+        "title": "Un labyrinthe t'attend 💙",
+        "body": "Choisis un niveau et trace ta ligne jusqu'à la sortie. Un seul passage rapide suffit."
       },
       "es": {
-        "title": "Tu laberinto te espera 💙",
-        "body": "Tu puesto en la clasificación se enfría. ¡Vuelve, resuelve uno rápido y recupéralo!"
+        "title": "Un laberinto te espera 💙",
+        "body": "Elige un nivel y traza tu línea hasta la salida. Basta con una partida rápida."
       },
       "ja": {
-        "title": "迷路があなたを待っています 💙",
-        "body": "ランキングでのあなたの座が冷めてきています。サッと1問解いて取り戻そう！"
+        "title": "迷路が待っています 💙",
+        "body": "レベルを選んで、出口までの線を引こう。1回さっと解くだけ。"
       },
       "pt": {
-        "title": "O teu labirinto espera-te 💙",
-        "body": "O teu lugar no ranking está a arrefecer. Volta, resolve um rápido e reconquista-o!"
+        "title": "Um labirinto está à espera 💙",
+        "body": "Escolhe um nível e traça a tua linha até à saída. Basta uma passagem rápida."
       }
     }
   ],
@@ -143,24 +143,24 @@
     {
       "kind": "leaderboard",
       "en": {
-        "title": "Someone outgrew your score 👀",
-        "body": "A player is passing your best. Come back and reclaim your place on the leaderboard!"
+        "title": "Your best score is your row 🏆",
+        "body": "The World Ladder shows each player's best, with the tier reached as tiebreaker. Find yours."
       },
       "fr": {
-        "title": "Ton score est dépassé 👀",
-        "body": "Un joueur dépasse ton meilleur score. Reviens reprendre ta place au classement !"
+        "title": "Ton meilleur score, c'est ta ligne 🏆",
+        "body": "Le classement mondial affiche le meilleur de chaque joueur, le niveau atteint départage. Trouve la tienne."
       },
       "es": {
-        "title": "Alguien superó tu marca 👀",
-        "body": "Un jugador está superando tu mejor puntuación. ¡Vuelve y recupera tu lugar!"
+        "title": "Tu mejor puntuación es tu fila 🏆",
+        "body": "La clasificación mundial muestra el mejor de cada jugador, y el nivel alcanzado desempata. Busca la tuya."
       },
       "ja": {
-        "title": "スコアが抜かれそう 👀",
-        "body": "あるプレイヤーがあなたのベストを超えそうです。戻って順位を取り戻そう！"
+        "title": "ベストスコアがあなたの順位 🏆",
+        "body": "ワールドランキングは各プレイヤーのベストを表示し、到達ティアで同点を分けます。自分の行を探そう。"
       },
       "pt": {
-        "title": "Alguém superou a tua pontuação 👀",
-        "body": "Um jogador está a passar a tua melhor marca. Volta e reconquista o teu lugar!"
+        "title": "A tua melhor pontuação é a tua linha 🏆",
+        "body": "O ranking mundial mostra o melhor de cada jogador, e o nível alcançado desempata. Encontra a tua."
       }
     },
     {
@@ -190,23 +190,23 @@
       "kind": "leaderboard",
       "en": {
         "title": "Where do you stand? 🏆",
-        "body": "The World Ladder ranks every player by score. Check your row and see who is above you."
+        "body": "The World Ladder holds the top 100 players by score. Open it and see the board."
       },
       "fr": {
         "title": "Tu te situes où ? 🏆",
-        "body": "Le classement mondial range chaque joueur par score. Regarde ta ligne et qui te précède."
+        "body": "Le classement mondial réunit les 100 meilleurs joueurs par score. Ouvre-le et regarde le tableau."
       },
       "es": {
         "title": "¿En qué puesto estás? 🏆",
-        "body": "La clasificación mundial ordena a los jugadores por puntuación. Mira tu fila y quién va por delante."
+        "body": "La clasificación mundial reúne a los 100 mejores por puntuación. Ábrela y mira la tabla."
       },
       "ja": {
         "title": "今の順位は？ 🏆",
-        "body": "ワールドランキングはスコア順。自分の行と、上にいるプレイヤーを確かめよう。"
+        "body": "ワールドランキングはスコア上位100人。開いて一覧を見てみよう。"
       },
       "pt": {
         "title": "Em que lugar estás? 🏆",
-        "body": "O ranking mundial ordena os jogadores por pontuação. Vê a tua linha e quem está à frente."
+        "body": "O ranking mundial reúne os 100 melhores por pontuação. Abre-o e vê a tabela."
       }
     },
     {
